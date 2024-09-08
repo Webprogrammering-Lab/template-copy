@@ -1,0 +1,18 @@
+# https://docs.github.com/en/enterprise-cloud@latest/actions/sharing-automations/creating-workflow-templates-for-your-organization#creating-a-workflow-template
+name: Test reusable workflow
+
+on:  
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
