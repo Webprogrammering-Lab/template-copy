@@ -1,0 +1,36 @@
+#
+# dbwebb validate exclude and include files for validate and publish.
+# 
+# Paths start from courserepo, so path to me is "./me".
+#
+
+# ignore non assignment folders
+-./me/kmom01/hello/*
+-./me/kmom02/flow/*
+-./me/kmom03/functions/*
+-./me/kmom04/list/*
+-./me/kmom05/warehouse/*
+-./me/kmom06/file/*
+-./me/kmom10/prep/*
+
+# Start by removing some common -files and add some +subdirs
+-*/.git/*
+-*/build/*
+-*/cache/*
+-*/docs/*
+-*/lib/*
+-*.min.*
+-*.png
+-*.jpg
+-./.venv
+
+-./me/*/vendor/*
+-./me/*/node_modules/*
+
+#-./me/*/platforms/*
+#+./me/*/platforms/browser/www/*.html
+#+./me/*/platforms/browser/www/css/*.css
+#+./me/*/platforms/browser/www/js/*.js
+
+# -- Really remove files, even if found below +subdirs
+#--*font-awesome*
