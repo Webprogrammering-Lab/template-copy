@@ -12,6 +12,8 @@ Jag tänker att man kan göra ett make command för att koppla repot till templa
     Efter satt upp upstream kör
     `git fetch --all`
     `git merge template/main --allow-unrelated-histories`
+    verkar som att add remote inte blir det av repot. Måste lägga till det igen på annan dator. Hittar inget med google hur man gör det bara en gång.
+    En till fördel med denna är att pull inte försöker skriva över samma filer igen om man har ändrat dem sen.
     Kan göra make commands av ovanstående.
 - I target repo baserat på crontab [Sync action](https://github.com/marketplace/actions/actions-template-sync)
     - Problem med att uppdatera workflows i copy repo. För att action ska få uppdatera workflows behöver man skapa en PAT med specifika rättigheter. https://github.com/marketplace/actions/actions-template-sync#troubleshooting.
