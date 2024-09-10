@@ -12,8 +12,13 @@ Jag tänker att man kan göra ett make command för att koppla repot till templa
     Efter satt upp upstream kör
     `git fetch --all`
     `git merge template/main --allow-unrelated-histories`
+    Kan göra make commands av ovanstående.
 - I target repo baserat på crontab [Sync action](https://github.com/marketplace/actions/actions-template-sync)
+    Problem med att uppdatera workflows i copy repo. För att action ska få uppdatera workflows behöver man skapa en PAT med specifika rättigheter. Behövs i varje copy repo. https://github.com/marketplace/actions/actions-template-sync#troubleshooting.
+    Känns som det är lättare att bara göra manuell fetch och merge i terminalen som ovanför.
+
 - I source repo baserat på push/PR/osv... Hittar automatiskt de repo som är skapade från template [sync action](https://github.com/ahmadnassri/action-template-repository-sync)
+    Dennna behöver också PAT. Har inte testat denna än dock.
 - [fetch till ny branch och sen merge från den till main](https://stackoverflow.com/a/69563752)
 - [Använd Github importer för att skapa repo. Då kan man göra fetch och merge senare](https://stackoverflow.com/a/66948475)
 - [Merge med squash](https://stackoverflow.com/a/75573089)
